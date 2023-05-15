@@ -4,7 +4,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const version = "v1";
 const cors = require('cors');
-const { logdoordata } = require('./src/req/logdata');
+const { logdata } = require('./src/req/logdata');
 app.use(bodyParser.json());
 app.use(cors())
 
@@ -17,8 +17,8 @@ app.use(cors())
 
   /*api*/
 
-app.post(`/${version}/logdoordata`, (req, res) => {
-    res.json(logdoordata(req));
+app.post(`/${version}/logdata`, (req, res) => {
+    res.json(logdata(req));
 });
 
 

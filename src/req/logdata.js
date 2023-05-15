@@ -1,7 +1,7 @@
 const { checkdevice } = require("../module/checkdevice")
 const { mysql } = require("../module/mysql")
 
-const logdoordata = (req) => {
+const logdata = (req) => {
 
     const check = checkdevice(req.body.uid, req.body.type)
 
@@ -16,4 +16,4 @@ const logdoordata = (req) => {
 }
 
 
-exports.logdoordata = logdoordata
+exports.logdata = logdata

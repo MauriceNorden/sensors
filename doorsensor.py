@@ -3,7 +3,7 @@ from machine import ADC, Pin
 import network
 import sys
 import time
-API_URL = "http://192.168.0.100:5000/v1/logdoordata"
+API_URL = "http://192.168.0.100:5000/v1/logdata"
 WIFI_SSID = "DikkeBende"
 WIFI_PASSWORD = "1234567890"
 adc = ADC(Pin(26))
@@ -21,8 +21,6 @@ def get_mac_address():
 
 mac_address = get_mac_address()
 
-    
-    
 while True:
     try:
         time.sleep_ms(5000)
@@ -38,14 +36,4 @@ while True:
         print("API Response:", response.status_code)
         
     except Exception as exc:
-        machine.reset()    
-
-
-
-
-
-    
-
-
-
-
+        machine.reset() 
