@@ -1,0 +1,46 @@
+:root {
+    --padding: 20px;
+    --contrast: #fff;
+    --big: #afafaf;
+    --bigger: #5a5a5a;
+    --biggest: #000000;
+  }
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header{
+    background-color: var(--biggest);
+    padding: var(--padding);
+    color: var(--contrast);
+    text-align: center;
+    width: calc(100% - 40px);
+}
+
+header a{
+    color: var(--contrast);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 var(--padding);
+}
+
+/* Section */
+
+section{
+    padding: var(--padding);
+    width: calc(100% - 40px);
+    display: block;
+    background: var(--big);
+}
+
+div{
+    background: var(--bigger);
+    padding: var(--padding);
+    margin: var(--padding);
+    border-radius: 10px;
+}
