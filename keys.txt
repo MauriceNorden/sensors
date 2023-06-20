@@ -1,0 +1,5 @@
+Vapid:
+{
+  publicKey: '',
+  privateKey: ''
+}

@@ -1,14 +1,14 @@
 const { mysql } = require("../module/mysql")
 
 const getdata = (req) => {
-    if(deviceid == "all"){
-        const specificLog = mysql(`SELECT * FROM datalog WHERE typeid = '${req.body.typeid}' ORDER BY ID DESC LIMIT 1`)
-        return {status: "ok", data: specificLog}
 
-    }else{
-        const allLogs = mysql(`SELECT * FROM datalog`)
-        return {status: "ok", data: allLogs}
-    }
+        const specificLog = mysql(`SELECT datalog.*, devices.name AS devicename
+        FROM datalog
+        JOIN devices ON datalog.deviceid = devices.ID WHERE datalog.typeid = '${req}' ORDER BY ID`)
+
+
+
+        return {status: "ok", data: specificLog}
 }
 
 exports.getdata = getdata
